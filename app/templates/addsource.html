@@ -1,0 +1,30 @@
+{% extends 'links.html' %} {% load static%} {% block content %}
+<div class="container">
+<form action="/addcovidsource" method="POST">
+  {% csrf_token %}
+  <div class="form-row align-items-center">
+    <div class="col-5 my-1">
+      <label class="sr-only" for="urlInput">Covid News Source</label>
+      <input
+        type="url"
+        required
+        name="weblink"
+        class="form-control"
+        id="urlInput"
+        placeholder="Enter website Url"
+      />
+    </div>
+    <div class="col-3 my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+
+{% for p in links %}
+<p>
+<a href="{{p.url}}">{{p.url}}</a>
+</p>
+{% endfor %}
+
+</div>
+{% endblock %}
