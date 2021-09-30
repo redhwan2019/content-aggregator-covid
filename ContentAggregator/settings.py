@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-8r!aa=hkct$(zur%uduxvp*eyripb3m7%w#444r#d+f0m2jw9(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tranquil-beach-64846']
 
 
 # Application definition
@@ -43,9 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_static_fontawesome",
+
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

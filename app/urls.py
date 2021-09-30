@@ -21,8 +21,8 @@ urlpatterns = [
     path('', home,name='home'),
     path('clearArticles', clearArticles,name='clearArticles'),
     path('clearLinks', clearLinks,name='clearLinks'),
-    path('covidContentLinks', covidContentLinks,name='covidContentLinks'),
     path('addcovidsource', addcovidsource,name='addcovidsource'),
+    path('deletecovidsource', deletecovidsource,name='deletecovidsource'),
     path('updatecovid', updatecovid,name='updatecovid'),
 
 ]
